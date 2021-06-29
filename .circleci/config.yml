@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - android/start-emulator-and-run-tests:
-          system-image: system-images;android-29;default;x86
+          system-image: system-images;android-23;default;x86
 workflows:
   test:
     jobs:

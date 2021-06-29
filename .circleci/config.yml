@@ -17,11 +17,6 @@ jobs:
       # Checkout the code as the first step.
       - checkout
       
-      # And finally run the release build
-      - run:
-          name: UPDATE SDK
-          command: | sdkmanager --update
-            ./gradlew assembleRelease    
 
       # Then start the emulator and run the Instrumentation tests!
       - android/start-emulator-and-run-tests:

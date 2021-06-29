@@ -17,11 +17,16 @@ jobs:
       # Checkout the code as the first step.
       - checkout
       
+ test:
+    override:
+    - ADB_INSTALL_TIMEOUT=10 ./gradlew connectedAndroidTest
+        timeout: 360
+      
 
-      # Then start the emulator and run the Instrumentation tests!
-      - android/start-emulator-and-run-tests:
-          test-command: ./gradlew connectedDebugAndroidTest
-          system-image: system-images;android-26;google_apis;x86
+#       # Then start the emulator and run the Instrumentation tests!
+#       - android/start-emulator-and-run-tests:
+#           test-command: ./gradlew connectedDebugAndroidTest
+#           system-image: system-images;android-26;google_apis;x86
 
       # And finally run the release build
       - run:

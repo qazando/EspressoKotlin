@@ -17,9 +17,14 @@ jobs:
       # Checkout the code as the first step.
       - checkout
 
-      # The next step will run the unit tests
-      # - android/run-tests:
-      #     test-command: ./gradlew lint testDebug --continue
+#       # The next step will run the unit tests
+# <<<<<<< circleci-editor/circleci-project-setup
+#       # - android/run-tests:
+#       #     test-command: ./gradlew lint testDebug --continue
+# =======
+#       - android/run-tests:
+#           test-command: ./gradlew lint testDebug --continue
+# >>>>>>> master
 
       # Then start the emulator and run the Instrumentation tests!
       - android/start-emulator-and-run-tests:
